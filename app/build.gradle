@@ -25,6 +25,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        buildTypes.each {
+            it.buildConfigField("String", "BASE_URL", '"https://api.rawg.io/api"')
+            it.buildConfigField("String", "API_KEY", '"f9739e9116ec40c1be6c295525479ced"')
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
