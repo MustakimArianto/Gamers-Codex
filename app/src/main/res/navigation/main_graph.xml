@@ -9,5 +9,18 @@
         android:id="@+id/homeFragment"
         android:name="com.mustakimarianto.gamerscodex.ui.main.home.view.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_to_game_list"
+            app:destination="@id/gameListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameListFragment"
+        android:name="com.mustakimarianto.gamerscodex.ui.main.gamelist.view.GameListFragment"
+        android:label="fragment_game_list"
+        tools:layout="@layout/fragment_game_list" >
+        <argument
+            android:name="platforms"
+            app:argType="string" />
+    </fragment>
 </navigation>

@@ -95,13 +95,13 @@
             android:text="Playstation 5" />
 
         <Button
-            android:id="@+id/btn_home_xbox360"
+            android:id="@+id/btn_home_xboxsx"
             android:layout_width="wrap_content"
             android:layout_marginLeft="2dp"
             android:textAllCaps="false"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Xbox 360" />
+            android:text="Xbox S/X" />
     </LinearLayout>
 
     <TextView
