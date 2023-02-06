@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.mustakimarianto.gamerscodex.adapter.games.GamesAdapter
 import com.mustakimarianto.gamerscodex.databinding.FragmentGameListBinding
 import com.mustakimarianto.gamerscodex.ui.main.gamelist.viewmodel.GameListViewModel
 import com.mustakimarianto.gamerscodex.utils.Resource
@@ -54,7 +56,10 @@ class GameListFragment : Fragment() {
                     isLoading = false
 
                     it.data?.let { response ->
-                        binding.tvGameList.text = response.toString()
+                        binding.rvGameListGames.layoutManager =
+                            LinearLayoutManager(requireContext())
+
+                        binding.rvGameListGames.adapter = GamesAdapter(response.results)
                     }
                 }
 
